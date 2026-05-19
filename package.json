@@ -1,0 +1,27 @@
+{
+  "name": "mcp-jira-tempo",
+  "version": "1.0.0",
+  "description": "MCP server for unified Jira and Tempo time tracking",
+  "type": "module",
+  "main": "dist/infrastructure/McpServer.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/infrastructure/McpServer.js",
+    "dev": "tsx src/infrastructure/McpServer.ts",
+    "test": "npx tsx --test tests/use-cases.test.ts",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "axios": "^1.7.9",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "typescript": "^5.7.3",
+    "tsx": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

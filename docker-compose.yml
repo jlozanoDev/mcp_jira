@@ -1,0 +1,11 @@
+services:
+  mcp-jira-tempo:
+    build: .
+    environment:
+      - JIRA_BASE_URL=${JIRA_BASE_URL:?Required}
+      - JIRA_USER_EMAIL=${JIRA_USER_EMAIL:?Required}
+      - JIRA_API_TOKEN=${JIRA_API_TOKEN:?Required}
+      - TEMPO_API_TOKEN=${TEMPO_API_TOKEN:?Required}
+    stdin_open: true
+    tty: true
+    restart: "no"
